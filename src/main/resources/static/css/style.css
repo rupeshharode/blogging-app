@@ -1,0 +1,102 @@
+/* Reset some defaults */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9fafb;
+    color: #333;
+}
+
+/* Page heading */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* New Post button */
+input[type="button"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+input[type="button"]:hover {
+    background-color: #2980b9;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #f1f1f1;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Section heading */
+.heading h5 {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #34495e;
+}
+
+/* Input field */
+.id-input input {
+    width: 200px;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Edit/Delete buttons */
+.edit-delete-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.edit input[type="button"] {
+    background-color: #27ae60;
+}
+
+.edit input[type="button"]:hover {
+    background-color: #1e8449;
+}
+
+.delete input[type="button"] {
+    background-color: #e74c3c;
+}
+
+.delete input[type="button"]:hover {
+    background-color: #c0392b;
+}
+.editsection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
