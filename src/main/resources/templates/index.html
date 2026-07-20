@@ -36,12 +36,21 @@
    </div>
    <div class ="edit-delete-buttons">
        <div class="edit">
-            <input type="button" value="Edit" onclick="window.location.href='/edit?id=' + document.getElementById('postId').value" />
+            <input type="button" value="Edit" onclick="edit(document.getElementById('postId').value)" />
        </div>
        <div class="delete">
             <input type="button" value="Delete" onclick="window.location.href='/delete?id=' + document.getElementById('postId').value" />
        </div>
    </div>
    </div>
+    <script>
+          function edit(postId) {
+                if (postId) {
+                 window.location.href = '/edit?id=' + postId;
+                } else {
+                 alert('Please enter a valid Post ID');
+                }
+          }
+     </script>
 </body>
 </html>

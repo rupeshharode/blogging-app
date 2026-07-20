@@ -1,13 +1,9 @@
 package com.blog.blogging.controller;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-
 import com.blog.blogging.model.post;
 import com.blog.blogging.repository.postRepository;
-
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -66,7 +62,11 @@ public String savePost(@RequestParam("title") String title,
    }
  @GetMapping("/delete")
     public String deletePost(@RequestParam("id") int id) {
-        postRepo.deleteById(id);
+        post existingPost = postRepo.findById(id).orElse(null);
+        if (existingPost != null) {
+            postRepo.deleteById(id);
+            return "redirect:/";
+        }
         return "redirect:/";
     }
 
